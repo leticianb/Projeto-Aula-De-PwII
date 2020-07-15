@@ -1,3 +1,3 @@
 $(document).read(function() {
-    $('#conteudo').load('src/disciplinas/visao/listdisciplina.html';)
+    $('#conteudo').load('src/disciplina/visao/listdisciplina.html');
 })
