@@ -10,10 +10,19 @@ echo "Existem campos em branco. tente novamente";
 else{
     $sql = "INSERT INTO disciplina (nome, professor, nota) VALUES ('".$nome."', '".$professor."', '".$nota."')";
     if(mysqli_query($conecta, $sql)){
-        echo "A disciplina ".$nome. " foi salva com sucesso";
+        $dados = array(
+            'tipo' -> 'alert-succes',
+            'mensagem' -> "A disciplina ".$nome. " foi salva com sucesso";
+        );
+        
     }
     else{
-        echo " deu ruim".mysqli_error($conecta);
+        $dados = array(
+            'tipo' -> 'alert-danger',
+            'mensagem' -> " deu ruim ".mysqli_error($conecta);
+        );
+       
     }
 
 }
+echo json_encode($dados);
