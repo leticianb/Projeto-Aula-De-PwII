@@ -5,7 +5,7 @@
             assync: true,
             url: 'src/conexao/disciplina/modelo/listdisciplina.php',
             success: function(dados) {
-                for (var i = 0; i < dados.lengh; i++) {
+                for (var i = 0; i < dados.length; i++) {
                     let resultado = `  <tr>
                     <td>${dados[i].id}</td>
                     <td>${dados[i].nome}</td>
