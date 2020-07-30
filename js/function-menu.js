@@ -6,5 +6,10 @@ $(document).ready(function() {
         $('#conteudo').empty()
         $('#conteudo').load('src/conexao/disciplina/modelo/visao/adicionadisciplina.html')
     })
+    $('#listar').click(function(e) {
+        e.preventDefault()
+        $('#conteudo').empty()
+        $('#conteudo').load('src/conexao/disciplina/modelo/visao/listdisciplina.html')
+    })
 
 })
