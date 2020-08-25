@@ -1,3 +1,12 @@
+function btnclose() {
+    $('.btn-close').click(function(e) {
+        e.preventDefault()
+        $('#form').empty()
+        $('#form').hide(3000)
+        $('.table').show(3000)
+    })
+}
+
 $(document).ready(function() {
 
     $('.btn-view').click(function(e) {
@@ -10,6 +19,9 @@ $(document).ready(function() {
             data: dados,
             url: 'src/disciplina/modelo/viewdisciplina.php',
             success: function(dados) {
+                $('#form').show(3000)
+                $('.table').hide(3000)
+
                 $('#form').load('src/disciplina/visao/adicionadisciplina.html', function() {
                     $('h4').empty()
                     $('h4').append('Visualização de Registro')
@@ -22,7 +34,10 @@ $(document).ready(function() {
                     $('#nota').append(`<option>${dados[0].nota}</option>`)
                     $('#professor').attr('disabled', true)
                     $('#professor').val(dados[0].professor)
+
+                    btnclose()
                 })
+
             }
         })
 
