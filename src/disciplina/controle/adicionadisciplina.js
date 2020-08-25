@@ -9,7 +9,7 @@ $(document).ready(function() {
             dataType: 'JSON',
             assync: true,
             data: dados,
-            url: 'src/conexao/disciplina/modelo/adicionadisciplina.php',
+            url: 'src/disciplina/modelo/adicionadisciplina.php',
             success: function(dados) {
                 $('#adicionadisciplina').after(`
                             <div class="alert ${dados.tipo} alert-dismissible fade show" role="alert">

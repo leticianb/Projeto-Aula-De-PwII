@@ -3,7 +3,7 @@
             type: 'POST',
             dataType: 'JSON',
             assync: true,
-            url: 'src/conexao/disciplina/modelo/listdisciplina.php',
+            url: 'src/disciplina/modelo/listdisciplina.php',
             success: function(dados) {
                 for (var i = 0; i < dados.length; i++) {
                     let resultado = `  <tr>
