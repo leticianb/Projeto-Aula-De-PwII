@@ -3,7 +3,7 @@
     include('../../conexao/conn.php');
  
 
-    $sql = "SELECT * FROM disciplina WHERE id = ".$_REQUEST[id]."";
+    $sql = "SELECT * FROM disciplina WHERE id = ".$_REQUEST['id']."";
  
 
     $resultado = mysqli_query($conecta, $sql);
