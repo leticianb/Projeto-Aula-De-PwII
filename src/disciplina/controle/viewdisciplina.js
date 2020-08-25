@@ -5,7 +5,11 @@ $(document).ready(function() {
         $('#form').load('src/disciplina/visao/adicionadisciplina.html', function() {
             $('h4').empty()
             $('h4').append('Visualização de Registro')
-            $('.btn-save').after(' <button class="btn btn-secondary btn-block btn-save"><i class="mdi mdi-save-content"></i> Salvar Alterações</button>')
+            $('.btn-save').after(' <button class="btn btn-secondary btn-block btn-close"><i class="mdi mdi-close"></i> Fechar</button>')
+            $('.btn-save').hide()
+            $('#nome').attr('disabled', true)
+            $('#nota').attr('disabled', true)
+            $('#professor').attr('disabled', true)
         })
 
     })
