@@ -17,7 +17,7 @@
                         <button class="btn btn-danger btn-sm btn-delete"><i class="mdi mdi-trash-can"></i></button>
                     </td>
                 </tr>`
-                    $(tbody).append(resultado)
+                    $('tbody').append(resultado)
                 }
             }
 

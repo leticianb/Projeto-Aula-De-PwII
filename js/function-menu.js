@@ -4,12 +4,12 @@ $(document).ready(function() {
     $('#adiciona').click(function(e) {
         e.preventDefault()
         $('#conteudo').empty()
-        $('#conteudo').load('src/disciplina/modelo/visao/adicionadisciplina.html')
+        $('#conteudo').load('src/disciplina/visao/adicionadisciplina.html')
     })
     $('#listar').click(function(e) {
         e.preventDefault()
         $('#conteudo').empty()
-        $('#conteudo').load('src/disciplina/modelo/visao/listdisciplina.html')
+        $('#conteudo').load('src/disciplina/visao/listdisciplina.html')
     })
 
 })
