@@ -16,8 +16,12 @@ $(document).ready(function() {
                     $('.btn-save').after(' <button class="btn btn-secondary btn-block btn-close"><i class="mdi mdi-close"></i> Fechar</button>')
                     $('.btn-save').hide()
                     $('#nome').attr('disabled', true)
+                    $('#nome').val(dados[0].nome)
                     $('#nota').attr('disabled', true)
+                    $('#nota').empty()
+                    $('#nota').append(`<option>${dados[0].nota}</option>`)
                     $('#professor').attr('disabled', true)
+                    $('#professor').val(dados[0].professor)
                 })
             }
         })
