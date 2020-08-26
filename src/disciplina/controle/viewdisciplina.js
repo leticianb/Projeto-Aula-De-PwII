@@ -2,8 +2,8 @@ function btnclose() {
     $('.btn-close').click(function(e) {
         e.preventDefault()
         $('#form').empty()
-        $('#form').hide(3000)
-        $('.table').show(3000)
+        $('#form').hide(2000)
+        $('.row').show(2000)
     })
 }
 
@@ -19,8 +19,8 @@ $(document).ready(function() {
             data: dados,
             url: 'src/disciplina/modelo/viewdisciplina.php',
             success: function(dados) {
-                $('#form').show(3000)
-                $('.table').hide(3000)
+                $('#form').show(2000)
+                $('.row').hide(2000)
 
                 $('#form').load('src/disciplina/visao/adicionadisciplina.html', function() {
                     $('h4').empty()
