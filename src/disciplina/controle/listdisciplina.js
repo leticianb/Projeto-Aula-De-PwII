@@ -20,6 +20,7 @@
                     $('tbody').append(resultado)
                 }
                 $('body').append('<script src="src/disciplina/controle/viewdisciplina.js"></script>')
+                $('body').append('<script src="src/disciplina/controle/editardisciplina.js"></script>')
             }
 
         })
