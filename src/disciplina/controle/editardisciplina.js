@@ -1,3 +1,11 @@
+function save() {
+    $('.btn-save').click(function(e) {
+        e.preventDefault()
+        $('#form').empty()
+        $('#form').hide(2000)
+            // $('.row').show(2000)
+    })
+}
 $(document).ready(function() {
 
     $('.btn-edit').click(function(e) {
@@ -8,14 +16,14 @@ $(document).ready(function() {
             dataType: 'JSON',
             assync: true,
             data: dados,
-            url: 'src/disciplina/modelo/editardisciplina.php',
+            url: 'src/disciplina/modelo/viewdisciplina.php',
             success: function(dados) {
 
                 $('#form').show()
                 $('#form').load('src/disciplina/visao/adicionadisciplina.html', function() {
                     $('.btn-save')
                     $('h4').empty()
-                    $('h4').append('Visualização de Registro')
+                    $('h4').append('Edição de Registro')
                         //$('.btn-save').after(' <button class="btn btn-secondary btn-block btn-close"><i class="mdi mdi-close"></i> Fechar</button>')
 
                     //  $('#nome').attr('disabled', true)
