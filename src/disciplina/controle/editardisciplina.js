@@ -34,11 +34,12 @@ $(document).ready(function() {
 
 
                     $('#nota').append(`<option selected>${dados[0].nota}</option>`)
-
+                    $('#nota').after(` <input type="hidden" name="id" id="id" value ="${dados[0].id}">`)
                     $('#professor').val(dados[0].professor)
 
                     btnclose()
                 })
+                $('body').append('<script src="src/disciplina/controle/updatedisciplina.js"></script>')
 
             }
         })
