@@ -26,6 +26,8 @@ $(document).ready(function() {
                     $('h4').empty()
                     $('h4').append('Edição de Registro')
                     $('.btn-save').after(' <button class="btn btn-secondary btn-block btn-close"><i class="mdi mdi-close"></i> Fechar</button>')
+                    $('.btn-save').addClass('btn-update').removeClass('btn-save')
+
 
                     $('#nome').val(dados[0].nome)
 
