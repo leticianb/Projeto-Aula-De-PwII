@@ -20,7 +20,7 @@ $sql = "INSERT INTO alunos (nome, curso, tipo) VALUES ('".$nome."', '".$curso."'
 if(mysqli_query($conecta, $sql)){
 $dados = array(
 'tipo' => 'alert-success',
-'mensagem' => 'O aluno '.$nome.', foi salva com sucesso!'
+'mensagem' => 'O aluno '.$nome.', foi salvo com sucesso!'
 );
 }else{
 $dados = array(
