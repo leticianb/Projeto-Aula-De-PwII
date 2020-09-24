@@ -7,11 +7,12 @@
             success: function(dados) {
                 for (var i = 0; i < dados.length; i++) {
                     let resultado = `  <tr>
-                    <td>${dados[i].aluno}</td>
-                    <td>${dados[i].curso}</td>
-                    <td>${dados[i].tipo}</td>
-                   
-                    <td>
+                    <td >${dados[i].id}</td>
+                    <td >${dados[i].nome}</td>
+                    <td >${dados[i].curso}</td>
+                    <td >${dados[i].tipo}</td>
+             
+                    <td >
                         <button id="${dados[i].id}" class="btn btn-danger btn-sm btn-view"><i class="mdi mdi-eye"></i></button>
                         <button id="${dados[i].id}" class="btn btn-danger btn-sm btn-edit"><i class="mdi mdi-pencil"></i></button>
                         <button id="${dados[i].id}" class="btn btn-danger btn-sm btn-delete"><i class="mdi mdi-trash-can"></i></button>
@@ -26,4 +27,4 @@
             }
 
         })
-    }) aluno
+    })
