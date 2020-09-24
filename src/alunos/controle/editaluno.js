@@ -9,7 +9,7 @@ function btnclose() {
 
 $(document).ready(function() {
 
-    $('.btn-view').click(function(e) {
+    $('.btn-edit').click(function(e) {
         e.preventDefault()
         var dados = `id=${$(this).attr('id')}`
         $.ajax({

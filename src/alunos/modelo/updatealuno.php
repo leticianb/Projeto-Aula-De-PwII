@@ -16,7 +16,7 @@ $dados = array(
 );
 }else{
 
-$sql = "UPDATE alunos SET nome='".$nome."', curso='".$curso.", tipo=".$tipo." WHERE id=".$id."";
+$sql = "UPDATE alunos SET nome='".$nome."', curso='".$curso."', tipo=".$tipo." WHERE id=".$id."";
 
 if(mysqli_query($conecta, $sql)){
 $dados = array(
