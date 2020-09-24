@@ -30,6 +30,7 @@ $(document).ready(function() {
                     $('#nome').val(dados[0].nome)
                     $('#tipo').append(`<option value="${dados[0].tipo}" selected>${dados[0].tipo == 1? 'administrador' : 'aluno'}</option>`)
                     $('#curso').val(dados[0].curso)
+                    $('#curso').after(` <input type="hidden" name="id" value="${dados[0].id}">`)
                     btnclose()
                 })
                 $('body').append('<script src="src/alunos/controle/updatealuno.js"></script>')
