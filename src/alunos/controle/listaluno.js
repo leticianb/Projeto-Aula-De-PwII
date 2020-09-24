@@ -21,7 +21,7 @@
                     $('tbody').append(resultado)
                 }
                 $('body').append('<script src="src/alunos/controle/viewaluno.js"></script>')
-                $('body').append('<script src="src/alunos/controle/editaraluno.js"></script>')
+                $('body').append('<script src="src/alunos/controle/editaluno.js"></script>')
                 $('body').append('<script src="src/alunos/controle/deletealuno.js"></script>')
 
             }
