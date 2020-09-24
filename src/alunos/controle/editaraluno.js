@@ -28,7 +28,6 @@ $(document).ready(function() {
                     $('.btn-save').after(' <button class="btn btn-secondary btn-block btn-close"><i class="mdi mdi-close"></i> Fechar</button>')
                     $('.btn-save').addClass('btn-update').removeClass('btn-save')
                     $('#nome').val(dados[0].nome)
-
                     $('#tipo').append(`<option value="${dados[0].tipo}" selected>${dados[0].tipo == 1? 'administrador' : 'aluno'}</option>`)
                     $('#curso').val(dados[0].curso)
                     btnclose()
