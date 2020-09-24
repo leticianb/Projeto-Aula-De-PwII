@@ -29,12 +29,11 @@ $(document).ready(function() {
                     $('.btn-save').hide()
                     $('#nome').attr('disabled', true)
                     $('#nome').val(dados[0].nome)
-                    $('#nota').attr('disabled', true)
-                    $('#nota').empty()
-                    $('#nota').append(`<option>${dados[0].nota}</option>`)
+                    $('#tipo').attr('disabled', true)
+                    $('#tipo').empty()
+                    $('#tipo').append(`<option>${dados[0].tipo == 1? 'administrador' : 'aluno'}</option>`)
                     $('#curso').attr('disabled', true)
-                    $('#curso').val(dados[0].professor)
-
+                    $('#curso').val(dados[0].curso)
                     btnclose()
                 })
 

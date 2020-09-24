@@ -10,7 +10,7 @@
                     <td >${dados[i].id}</td>
                     <td >${dados[i].nome}</td>
                     <td >${dados[i].curso}</td>
-                    <td >${dados[i].tipo}</td>
+                    <td >${dados[i].tipo == 1? 'administrador' : 'aluno'}</td>
              
                     <td >
                         <button id="${dados[i].id}" class="btn btn-danger btn-sm btn-view"><i class="mdi mdi-eye"></i></button>
