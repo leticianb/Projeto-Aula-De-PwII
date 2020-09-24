@@ -3,7 +3,7 @@
             type: 'POST',
             dataType: 'JSON',
             assync: true,
-            url: 'src/alunos/modelo/listaluno.php',
+            url: 'src/alunos/modelo/listaraluno.php',
             success: function(dados) {
                 for (var i = 0; i < dados.length; i++) {
                     let resultado = `  <tr>
