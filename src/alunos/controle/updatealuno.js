@@ -15,7 +15,7 @@ $(document).ready(function() {
                     $('#form').empty()
                     $('#form').hide(2000)
                     $('tbody').empty()
-                    $('body').append(' <script src = "src/alunos/controle/listaraluno.js">< /script>')
+                    $('body').append(' <script src = "src/alunos/controle/listaluno.js">< /script>')
                     $('.row').show(2000)
                 } else {
                     alert('deu ruim')
