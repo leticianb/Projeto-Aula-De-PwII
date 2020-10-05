@@ -5,6 +5,8 @@ include('../../conexao/conn.php');
  
 $nome = $_REQUEST['nome'];
 $curso = $_REQUEST['curso'];
+$senha = $_REQUEST['senha'];
+$senha=md5($senha);
 $tipo = $_REQUEST['tipo'];
  
  
@@ -15,7 +17,7 @@ $dados = array(
 );
 }else{
 
-$sql = "INSERT INTO alunos (nome, curso, tipo) VALUES ('".$nome."', '".$curso."', ".$tipo.")";
+$sql = "INSERT INTO alunos (nome, curso, senha, tipo) VALUES ('".$nome."', '".$curso."', '".$senha."', ".$tipo.")";
 
 if(mysqli_query($conecta, $sql)){
 $dados = array(

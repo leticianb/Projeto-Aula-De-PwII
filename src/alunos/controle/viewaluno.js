@@ -34,6 +34,8 @@ $(document).ready(function() {
                     $('#tipo').append(`<option>${dados[0].tipo == 1? 'administrador' : 'aluno'}</option>`)
                     $('#curso').attr('disabled', true)
                     $('#curso').val(dados[0].curso)
+                    $('#senha').attr('disabled', true)
+                    $('#senha').val(dados[0].senha)
                     btnclose()
                 })
 

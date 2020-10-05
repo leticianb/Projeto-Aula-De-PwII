@@ -5,6 +5,8 @@ include('../../conexao/conn.php');
  
 $nome = $_REQUEST['nome'];
 $curso = $_REQUEST['curso'];
+$senha = $_REQUEST['senha'];
+$senha=md5($senha);
 $tipo = $_REQUEST['tipo'];
 $id = $_REQUEST['id'];
  
@@ -16,7 +18,7 @@ $dados = array(
 );
 }else{
 
-$sql = "UPDATE alunos SET nome='".$nome."', curso='".$curso."', tipo=".$tipo." WHERE id=".$id."";
+$sql = "UPDATE alunos SET nome='".$nome."', curso='".$curso."', senha='".$senha."', tipo=".$tipo." WHERE id=".$id."";
 
 if(mysqli_query($conecta, $sql)){
 $dados = array(
