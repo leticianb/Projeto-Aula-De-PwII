@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.brn-login').click(function(e) {
+    $('.btn-login').click(function(e) {
         e.preventDefault()
         var dados = $('#form-login').serialize()
         $.ajax({
@@ -9,14 +9,19 @@ $(document).ready(function() {
             data: dados,
             url: 'src/alunos/modelo/loginaluno.php',
             success: function(dados) {
-                $('#form-login').after(`
-                            <div class="alert ${dados.tipo} alert-dismissible fade show" role="alert">
-                            <strong>${dados.mensagem}</strong> 
+                if (dados.result == true) {
+                    alert('login correto');
+                } else {
+
+                    $('#form-login').after(`
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>ID ou senha errado</strong> 
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
                             </div>
                             `)
+                }
                 $('#id').val("")
                 $('#senha').val("")
 
