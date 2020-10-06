@@ -10,7 +10,7 @@ $(document).ready(function() {
             url: 'src/alunos/modelo/loginaluno.php',
             success: function(dados) {
                 if (dados.result == true) {
-                    alert('login correto');
+                    $(location).attr('href', 'painel.html');
                 } else {
 
                     $('#form-login').after(`
