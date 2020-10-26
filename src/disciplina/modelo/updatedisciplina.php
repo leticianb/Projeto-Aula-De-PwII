@@ -9,7 +9,7 @@ $nota = $_REQUEST['nota'];
 $id = $_REQUEST['id'];
  
  
-if(strlen($id) == 0 || strlen($professor) == 0){
+if(strlen($id) == 0 || strlen($professor) == 0 || strlen($nome) == 0){
 $dados = array(
 'tipo' => 'alert-warning',
 'mensagem' => 'Por favor preencha todo o formulário!'
