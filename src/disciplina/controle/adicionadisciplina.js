@@ -3,7 +3,7 @@ $(document).ready(function() {
         e.preventDefault()
 
         let dados = $('#adicionadisciplina').serialize();
-        console.log(dados);
+
         $.ajax({
             type: 'POST',
             dataType: 'JSON',
