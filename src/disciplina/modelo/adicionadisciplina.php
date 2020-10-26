@@ -29,5 +29,4 @@ $dados = array(
 );
 }
 }
- 
 echo json_encode($dados);
