@@ -6,6 +6,7 @@ include('../../conexao/conn.php');
 $nome = $_REQUEST['nome'];
 $professor = $_REQUEST['professor'];
 $nota = $_REQUEST['nota'];
+
  
  
 if(strlen($nome) == 0 || strlen($professor) == 0){
