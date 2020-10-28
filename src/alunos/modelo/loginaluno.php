@@ -18,6 +18,7 @@ if($resultado && mysqli_num_rows($resultado)>0){
     $_SESSION['id'] = $dados['id'];
     $_SESSION['nome'] = $dados['nome'];
     $_SESSION['curso'] = $dados['curso'];
+    $_SESSION['tipo'] = $dados['tipo'];
    }
  
     $dados = array('result'=> true);
