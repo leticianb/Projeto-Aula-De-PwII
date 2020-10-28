@@ -12,7 +12,7 @@ $(document).ready(function() {
                 $(location).attr('href', 'index.html');
             } else {
 
-                alert('usuário logado');
+                $('#boasvindas').append(dados.nome)
 
             }
 

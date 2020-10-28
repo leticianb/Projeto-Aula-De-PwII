@@ -4,9 +4,9 @@ session_start();
 
 
 
-if($_SESSION['id']){
+if(@$_SESSION['id']){
   
-    $dados = array('return' => true);
+    $dados = array('return' => true, 'nome'=> $_SESSION['nome']);
 }
 else{
     $dados = array('return' => false);
