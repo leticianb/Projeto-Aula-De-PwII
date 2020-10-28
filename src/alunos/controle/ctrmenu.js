@@ -8,7 +8,7 @@ $(document).ready(function() {
         url: 'src/alunos/modelo/tipoaluno.php',
         success: function(dados) {
             if (dados.tipo == 2) {
-                $('.alunos').hide()
+                $('.aluno').hide()
 
             }
         }
