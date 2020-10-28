@@ -7,7 +7,10 @@ $(document).ready(function() {
         data: dados,
         url: 'src/alunos/modelo/tipoaluno.php',
         success: function(dados) {
+            if (dados.tipo == 2) {
+                $('.alunos').hide()
 
+            }
         }
     })
 })
