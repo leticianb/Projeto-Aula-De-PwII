@@ -2,6 +2,7 @@
  
  
 include('../../conexao/conn.php');
+session_start();
  
 $nome = $_REQUEST['nome'];
 $professor = $_REQUEST['professor'];
@@ -16,7 +17,7 @@ $dados = array(
 );
 }else{
 
-$sql = "UPDATE disciplina SET nome='".$nome."', professor='".$professor."', nota='".$nota."' WHERE id=".$id."";
+$sql = "UPDATE disciplina SET nome='".$nome."', professor='".$professor."', nota='".$nota."', id_alunos=".$_SESSION['id']." WHERE id=".$id."";
 
 if(mysqli_query($conecta, $sql)){
 $dados = array(
