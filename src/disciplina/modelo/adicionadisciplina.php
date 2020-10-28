@@ -3,6 +3,7 @@
  
 include('../../conexao/conn.php');
  
+session_start();
 $nome = $_REQUEST['nome'];
 $professor = $_REQUEST['professor'];
 $nota = $_REQUEST['nota'];
@@ -16,7 +17,8 @@ $dados = array(
 );
 }else{
 
-$sql = "INSERT INTO disciplina (nome, professor, nota, id_alunos ) VALUES ('".$nome."', '".$professor."', '".$nota."')";
+$sql = "INSERT INTO disciplina (nome, professor, nota, id_alunos ) VALUES ('".$nome."', '".$professor."', '".$nota."'
+, ".$_SESSION['id'].")";
 
 if(mysqli_query($conecta, $sql)){
 $dados = array(
