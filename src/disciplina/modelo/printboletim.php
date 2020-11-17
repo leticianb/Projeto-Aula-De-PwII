@@ -17,24 +17,20 @@ $resultado = mysqli_query($conecta, $sql);
  
 
 if($resultado && mysqli_num_rows($resultado)>0){
-    
+    $imprimir='';
 
 while($print = mysqli_fetch_array($resultado)){
-    $dompdf->loadHtml('<p>'.$print['nome'].'-'.$print['professor'].'-'.$print['nota'].'<p>'
-    );
+    $imprimir= $imprimir.'<p>'.$print['nome'].'-'.$print['professor'].'-'.$print['nota'].'<p>';
+    
 }
 }else{
 $dados = array('erro' => 'Não foi possível buscar resultados');
 }
+
  
 //echo json_encode($dados);
 
-//$dompdf->loadHtml('
-//<h1>Ola Mundo</h1>
-  //  <p>Meu PDF Meu PDF Meu PDF Meu PDF </p>
-    //<p>Meu PDF Meu PDF Meu PDF Meu PDF</p>
-    //<p>Meu PDF Meu PDF Meu PDF Meu PDF</p>
-//');
+$dompdf->loadHtml($imprimir);
 
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
