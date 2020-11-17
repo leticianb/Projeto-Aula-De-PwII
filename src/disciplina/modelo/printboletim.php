@@ -39,10 +39,10 @@ if($resultado && mysqli_num_rows($resultado)>0){
 while($print = mysqli_fetch_array($resultado)){
    // $imprimir= $imprimir.'<p>'.$print['nome'].' - '.$print['professor'].' - '.$print['nota'].'<p>';
     $imprimir = $imprimir.'<tr>
-    <td>'.$print.['id'].'</td>
-    <td>'.$print.['nome'].'</td>
-    <td>'.$print.['professor'].'</td>
-    <td>'.$print.['nota'].'</td>
+    <td>'.$print['id'].'</td>
+    <td>'.$print['nome'].'</td>
+    <td>'.$print['professor'].'</td>
+    <td>'.$print['nota'].'</td>
   
 </tr>';
 }
