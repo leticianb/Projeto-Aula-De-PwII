@@ -1,3 +1,21 @@
+@keyframes bouce {
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+    }
+    80% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+    }
+}
+
 .btn-effects {
     transition: all 400ms ease;
 }
@@ -26,4 +44,8 @@
 .btn-rotate:hover {
     transform-origin: center bottom;
     transform: rotateX(-90deg) translateY(100%);
+}
+
+.btn-bounce:hover {
+    animation: bouce 1s;
 }
