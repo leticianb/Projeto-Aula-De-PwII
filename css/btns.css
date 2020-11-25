@@ -26,11 +26,11 @@
 }
 
 .btn-rotate:after {
-    padding: 0.375rem 0.75rem;
     width: 100%;
     margin-left: -50%;
-    line-height: 6.2rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1.5rem;
+    line-height: 6.2rem;
     border-radius: 0.25rem;
     top: -100%;
     position: absolute;
