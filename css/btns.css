@@ -2,4 +2,26 @@
     transition: all 400ms ease;
 }
 
-.btn-rotate {}
+.btn-rotate {
+    background: #dc3545;
+    transform-style: preserve-3d;
+}
+
+.btn-rotate:after {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    top: -100%;
+    position: absolute;
+    background: #dc3545;
+    box-sizing: border-box;
+    content: 'Acessar';
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+}
+
+.btn-rotate:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+}
