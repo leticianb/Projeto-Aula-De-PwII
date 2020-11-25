@@ -4,7 +4,7 @@
 }
 
 .area-animacao {
-    background: linear-gradient(to bottom, #5d795f, #ffffff);
+    background: linear-gradient(to bottom, #414141, #ffffff);
     width: 100%;
     height: 100vh;
 }
@@ -90,5 +90,5 @@
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    top: 15%;
+    margin-top: 15%;
 }
