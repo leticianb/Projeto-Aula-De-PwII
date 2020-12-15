@@ -7,8 +7,8 @@
             success: function(dados) {
                 for (var i = 0; i < dados.length; i++) {
                     let resultado = `  <tr>
-                    <td ><img  width="50" height="50" src="src/aluno/modelo/img/${dados[i].foto}"/></td>
-                    <td >${dados[i].foto}</td>
+                    <td ><img  width="50" height="50" src="src/alunos/modelo/img/${dados[i].foto}"/></td>
+                    <td >${dados[i].id}</td>
                     <td >${dados[i].nome}</td>
                     <td >${dados[i].curso}</td>
                     <td >${dados[i].tipo == 1? 'administrador' : 'aluno'}</td>
