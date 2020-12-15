@@ -2,12 +2,16 @@ $(document).ready(function() {
     $('.btn-save').click(function(e) {
         e.preventDefault()
 
-        let dados = $('#adicionaaluno').serialize();
+        var dados = new FormData(document.getElementById("adicionaaluno"))
+
         console.log(dados);
         $.ajax({
             type: 'POST',
             dataType: 'JSON',
-            assync: true,
+            mimeType: "multipart/form-data",
+            contentType: 'json',
+            cache: false,
+            processData: false,
             data: dados,
             url: 'src/alunos/modelo/adicionaaluno.php',
             success: function(dados) {
