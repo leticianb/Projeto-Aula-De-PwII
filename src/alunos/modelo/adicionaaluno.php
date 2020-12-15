@@ -17,8 +17,8 @@ $dados = array(
 );
 }else{
 $arquivo_tmp = $_FILES['foto']['tmp_name'];
-$nome = $_FILES['foto']['name'];
-$extensao = pathinfo($nome, PATHINFO_EXTENSION);
+$nomefoto = $_FILES['foto']['name'];
+$extensao = pathinfo($nomefoto, PATHINFO_EXTENSION);
 $extensao = strtolower($extensao);
 
 if(strstr('.jpg;.jpeg;.gif;.png', $extensao)){
