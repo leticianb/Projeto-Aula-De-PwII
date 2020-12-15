@@ -18,7 +18,7 @@ $dados = array(
 }else{
 $arquivo_tmp = $_FILES['foto']['tmp_name'];
 $nome = $_FILES['foto']['name'];
-$extensao = pathinfo($nome, PATHINFO_EXTESION);
+$extensao = pathinfo($nome, PATHINFO_EXTENSION);
 $extensao = strtolower($extensao);
 
 if(strstr('.jpg;.jpeg;.gif;.png', $extensao)){
@@ -28,7 +28,7 @@ $destino='img/'.$novonome;
 
 if(@move_uploaded_file($arquivo_tmp, $destino)){
    
-    $sql = "INSERT INTO alunos (nome, curso, senha, tipo, foto) VALUES ('".$nome."', '".$curso."', '".$senha."', ".$tipo.", '".$novonome"')";
+    $sql = "INSERT INTO alunos (nome, curso, senha, tipo, foto) VALUES ('".$nome."', '".$curso."', '".$senha."', ".$tipo.", '".$novonome."')";
 
     if(mysqli_query($conecta, $sql)){
     $dados = array(
@@ -41,7 +41,8 @@ if(@move_uploaded_file($arquivo_tmp, $destino)){
     'tipo' => 'alert-danger',
     'mensagem' => 'Deu ruim....'.mysqli_error($conecta)
     );
-    }
+}
+    
 }else{
     $dados = array(
         'tipo' => 'alert-danger',

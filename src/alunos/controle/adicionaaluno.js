@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.btn-save').click(function(e) {
+    $('#adicionaaluno').submit(function(e) {
         e.preventDefault()
 
         var dados = new FormData(document.getElementById("adicionaaluno"))
@@ -9,7 +9,7 @@ $(document).ready(function() {
             type: 'POST',
             dataType: 'JSON',
             mimeType: "multipart/form-data",
-            contentType: 'json',
+            contentType: false,
             cache: false,
             processData: false,
             data: dados,
